@@ -1,0 +1,22 @@
+{
+  "name": "Grocery Pro",
+  "short_name": "GroceryPro",
+  "description": "Intelligenter Einkaufsplaner für Winnenden und Umgebung",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#2E7D32",
+  "background_color": "#FFFFFF",
+  "lang": "de",
+  "categories": ["food", "shopping", "lifestyle"],
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" },
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    { "name": "Einkaufsliste", "url": "/#list", "description": "Einkaufsliste öffnen" },
+    { "name": "Märkte", "url": "/#stores", "description": "Märkte anzeigen" }
+  ]
+}

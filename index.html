@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Intelligenter Einkaufsplaner für Winnenden und Umgebung">
+  <meta name="theme-color" content="#2E7D32">
+
+  <!-- Apple PWA meta tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Grocery Pro">
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="apple-touch-icon" href="icons/icon.svg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+
+  <title>Grocery Pro</title>
+</head>
+<body>
+
+  <div id="app">
+
+    <header id="app-header">
+      <div class="header-left">
+        <img src="icons/icon.svg" alt="Logo" class="app-logo">
+        <h1 class="app-title">Grocery Pro</h1>
+      </div>
+      <div class="header-right">
+        <button id="btn-dark-mode" class="icon-btn" aria-label="Dark Mode umschalten">🌙</button>
+        <button id="btn-install" class="icon-btn hidden" aria-label="App installieren">📲</button>
+        <button id="btn-sync" class="icon-btn" aria-label="Synchronisieren">🔄</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="view-list" class="view active" aria-label="Einkaufsliste">
+        <!-- shopping list component renders here -->
+      </section>
+      <section id="view-stores" class="view" aria-label="Märkte">
+        <!-- store browser component renders here -->
+      </section>
+      <section id="view-route" class="view" aria-label="Route">
+        <!-- route view component renders here -->
+      </section>
+      <section id="view-budget" class="view" aria-label="Budget">
+        <!-- budget view component renders here -->
+      </section>
+    </main>
+
+    <nav id="bottom-nav" aria-label="Hauptnavigation">
+      <button class="nav-btn active" data-view="list">
+        <span class="nav-icon">🛒</span>
+        <span class="nav-label">Einkauf</span>
+      </button>
+      <button class="nav-btn" data-view="stores">
+        <span class="nav-icon">🏪</span>
+        <span class="nav-label">Märkte</span>
+      </button>
+      <button class="nav-btn" data-view="route">
+        <span class="nav-icon">🗺️</span>
+        <span class="nav-label">Route</span>
+      </button>
+      <button class="nav-btn" data-view="budget">
+        <span class="nav-icon">💰</span>
+        <span class="nav-label">Budget</span>
+      </button>
+    </nav>
+
+    <!-- Toast notifications -->
+    <div id="toast-container" aria-live="polite"></div>
+
+    <!-- Loading overlay -->
+    <div id="loading-overlay" class="hidden">
+      <div class="spinner"></div>
+      <p>Laden...</p>
+    </div>
+
+  </div>
+
+  <!-- Data globals (must load before services and components) -->
+  <script src="js/data/categories.js" defer></script>
+  <script src="js/data/products.js" defer></script>
+  <script src="js/data/stores.js" defer></script>
+
+  <!-- Core services -->
+  <script src="js/services/db.js" defer></script>
+  <script src="js/state.js" defer></script>
+  <script src="js/router.js" defer></script>
+
+  <!-- Feature services -->
+  <script src="js/services/route-optimizer.js" defer></script>
+  <script src="js/services/budget-tracker.js" defer></script>
+  <script src="js/services/recommendations.js" defer></script>
+
+  <!-- UI components -->
+  <script src="js/components/shopping-list.js" defer></script>
+  <script src="js/components/store-browser.js" defer></script>
+  <script src="js/components/route-view.js" defer></script>
+  <script src="js/components/budget-view.js" defer></script>
+
+  <!-- App entry point -->
+  <script src="js/app.js" defer></script>
+
+  <!-- Service Worker registration (non-deferred, runs after page load) -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('SW registered:', reg.scope))
+          .catch(err => console.error('SW registration failed:', err));
+      });
+    }
+  </script>
+
+</body>
+</html>

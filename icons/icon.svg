@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="256" fill="#2E7D32"/>
+
+  <!-- Cart body -->
+  <path d="M120 160 h36 l48 176 h192 l32-120 H196" fill="none" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Cart basket fill -->
+  <path d="M196 196 h212 l-28 104 H220 Z" fill="#A5D6A7" opacity="0.85"/>
+
+  <!-- Groceries: apple -->
+  <ellipse cx="240" cy="222" rx="22" ry="24" fill="#E53935"/>
+  <path d="M240 198 q4-14 12-12" fill="none" stroke="#388E3C" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Groceries: bread/loaf -->
+  <rect x="268" y="208" width="44" height="30" rx="15" fill="#F9A825"/>
+  <!-- bread lines -->
+  <line x1="282" y1="212" x2="282" y2="234" stroke="#E65100" stroke-width="3" stroke-linecap="round"/>
+  <line x1="296" y1="212" x2="296" y2="234" stroke="#E65100" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Groceries: carrot -->
+  <ellipse cx="348" cy="228" rx="10" ry="18" fill="#FF6D00" transform="rotate(-15 348 228)"/>
+  <path d="M346 210 q-4-12 2-14 m6-2 q2-10 6-10" fill="none" stroke="#388E3C" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Wheel left -->
+  <circle cx="228" cy="356" r="24" fill="#FFFFFF"/>
+  <circle cx="228" cy="356" r="12" fill="#2E7D32"/>
+
+  <!-- Wheel right -->
+  <circle cx="356" cy="356" r="24" fill="#FFFFFF"/>
+  <circle cx="356" cy="356" r="12" fill="#2E7D32"/>
+
+  <!-- Cart handle -->
+  <line x1="120" y1="160" x2="156" y2="160" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round"/>
+</svg>
