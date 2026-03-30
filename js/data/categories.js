@@ -1,0 +1,20 @@
+window.CATEGORIES = [
+  { id: 'obst-gemuese', name: 'Obst & Gemüse', icon: '🥦', color: '#4CAF50', sortOrder: 1 },
+  { id: 'milchprodukte', name: 'Milchprodukte', icon: '🥛', color: '#2196F3', sortOrder: 2 },
+  { id: 'brot-backwaren', name: 'Brot & Backwaren', icon: '🍞', color: '#FF9800', sortOrder: 3 },
+  { id: 'fleisch-fisch', name: 'Fleisch & Fisch', icon: '🥩', color: '#F44336', sortOrder: 4 },
+  { id: 'tiefkuehlprodukte', name: 'Tiefkühlprodukte', icon: '🧊', color: '#00BCD4', sortOrder: 5 },
+  { id: 'getraenke', name: 'Getränke', icon: '🥤', color: '#9C27B0', sortOrder: 6 },
+  { id: 'suesswaren-snacks', name: 'Süßwaren & Snacks', icon: '🍫', color: '#795548', sortOrder: 7 },
+  { id: 'konserven-fertiggerichte', name: 'Konserven & Fertiggerichte', icon: '🥫', color: '#607D8B', sortOrder: 8 },
+  { id: 'gewuerze-sossen', name: 'Gewürze & Soßen', icon: '🧂', color: '#FF5722', sortOrder: 9 },
+  { id: 'hygiene-koerperpflege', name: 'Hygiene & Körperpflege', icon: '🧴', color: '#E91E63', sortOrder: 10 },
+  { id: 'haushalt-reinigung', name: 'Haushalt & Reinigung', icon: '🧹', color: '#3F51B5', sortOrder: 11 },
+  { id: 'baby-kinder', name: 'Baby & Kinder', icon: '👶', color: '#FF80AB', sortOrder: 12 },
+  { id: 'tiernahrung', name: 'Tiernahrung', icon: '🐾', color: '#8D6E63', sortOrder: 13 },
+  { id: 'bio-naturkost', name: 'Bio & Naturkost', icon: '🌱', color: '#388E3C', sortOrder: 14 },
+  { id: 'internationale-spezialitaeten', name: 'Internationale Spezialitäten', icon: '🌍', color: '#F57C00', sortOrder: 15 },
+  { id: 'wein-spirituosen', name: 'Wein & Spirituosen', icon: '🍷', color: '#7B1FA2', sortOrder: 16 },
+  { id: 'drogerie-gesundheit', name: 'Drogerie & Gesundheit', icon: '💊', color: '#0097A7', sortOrder: 17 },
+  { id: 'schreibwaren-haushaltswaren', name: 'Schreibwaren & Haushaltswaren', icon: '✏️', color: '#546E7A', sortOrder: 18 }
+];
